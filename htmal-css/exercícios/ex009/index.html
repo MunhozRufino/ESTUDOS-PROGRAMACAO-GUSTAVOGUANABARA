@@ -4,24 +4,86 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../Iconleak-Cerulean-Compass.ico" type="image/x-icon">
-    <title>Outras formatações</title>
+    <link rel="stylesheet" href="../Iconleak-Cerulean-Compass.ico">
+    <title>Listas</title>
 </head>
 <body>
-    <h1>Outras formatações</h1>
-    <h2>Código-fonte / Pré-formatação</h2>
-    <p>O comando <code>document.getElementById('teste')</code> é escrito em liguagem Javascript</p>
+    <h1>Trabalhando com listas</h1>
 
-    <pre>
-        <code>
-    num = int(input('Digite um número'))
-    if num % 2 == 0:
-        print(f'0 número {num} é PAR')
-    else:
-        print(f'0 número {num} é ÍMPAR')
-    print('Fim do programa')
-        </code>
-    </pre>
-    
+    <h2>Listas Ordenadas</h2>
+    <ol type="1"> <!-- Formatações da lista = 1 A a I i -->
+        <li>Acordar</li>
+        <li>Ligar para o João</li>
+        <li>Tomar cafe</li>
+        <li>Escovar os dentes</li>
+        <li>Ir para a faculdade</li>
+        <li>Almoçar</li>
+        <li>Ir para o trabalho</li>
+        <li>Voltar para casa</li>
+        <li>Jantar</li>
+        <li>Dormir</li>
+    </ol>
+
+    <h2>Listas não ordenadas</h2>
+    <ul type="sqare"> <!-- Formatações da lista = disc, circle, square-->
+        <li>pão</li>
+        <li>Leite</li>
+        <li>Tomate</li>
+        <li>Alface</li>
+        <li>Manteiga</li>
+        <li>Arroz</li>
+        <li>Feijão</li>
+    </ul>
+
+    <h2>Minhas linguagens favoritas</h2>
+    <ol>
+        <li>Antigas</li>
+        <ol type="a">
+            <li>Clipper</li>
+            <li>Visual Basic</li>
+            <li>Fortran</li>
+            <li>Delphi</li>
+        </ol>
+        <li>Novas</li>
+        <ol type="a" start="5">
+            <li>PHP</li>
+            <li>Python</li>
+            <li>JavaScript</li>
+            <li>Kotlin</li>
+        </ol>
+    </ol>
+
+    <h2>Meus jogos favoritos</h2>
+    <ol>
+        <li>NES</li>
+        <ul type="disc">
+            <li>Mario Bros</li>
+            <li>NInja Gaiden</li>
+        </ul>
+        <li>SNES</li>
+        <ul type="disc">
+            <li>Mario</li>
+            <li>Donkey Kong</li>
+        </ul>
+        <li>PlayStation</li>
+        <ul type="disc">
+            <li>Final Fantasy</li>
+            <li>Castlevania</li>
+        </ul>
+    </ol>
+
+    <h2>Lista de definição</h2>
+    <dl>
+        <dt>HTML</dt>
+        <dd>Linguagem de marcação para a criação de conteúdo de um site</dd>
+        <dt>CSS</dt>
+        <dd>Liguagem de marcação para a criação de design de um site</dd>
+        <dt>JavaScript</dt>
+        <dd>Liguagem de programação para a criação de interatividade de um site</dd>
+    </dl>
+
+    <h2>Voltando para segunda página</h2>
+    <p>A segunda página esta <a href="../ex010/index.html" rel="prev">aqui</a></p>
+
 </body>
 </html>
