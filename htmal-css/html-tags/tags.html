@@ -150,41 +150,110 @@
             Também existe a tag &lt;u&gt; não semântica. Recomendo a utilização da tag &lt;ins&gt;
         </p>
     
-        <h3>&lt;sup&gt;</h3>
-            <p>
-                Esta tag deixa um trexo do texto sobrescrito conforme exemplo: x<sup>20</sup>+3
-            </p>
-        
-        <h3>&lt;sub&gt;</h3>
-            <p>
-                Esta tag deixa um trexo do texto subscrito conforme exemplo: H<sub>2</sub>O
-            </p>
-
-        <h3>&lt;pre&gt;</h3>
-            <p>
-                Esta tag é utilizada para representar texto pré-formatado. Um texto dentro desse elemento é tipicamente exibido em uma fonte não proporcional da mesma maneira em que o texto original foi disposto no arquivo. Espaços em branco são mantidos no texto da mesma forma em que este foi digitado. 
-            </p>
-        
-        <h3>&lt;code&gt;</h3>
-            <p>
-                Esta tag é utilizada para mostrar códigos scrippet dentro de um parágrafo conforme exemplo abaixo. Destaco que o código se encontra dentro de uma tag &lt;pre&gt; assim mantendo a formatação digitada e orientada conforme os espaçamentos.
-            </p>
-            <pre>
-                <code>
-                    num = int(input('Digite um número'))
-                    if num % 2 == 0:
-                        print(f'0 número {num} é PAR')
-                    else:
-                        print(f'0 número {num} é ÍMPAR')
-                    print('Fim do programa')
-                </code>
-            </pre>
-
-        <h3>&lt;q&gt;</h3>
-            <p>
-                Esta tag adiciona aspas &#34 &quot; diferente do código isolado, recomenda-se a utilização da tag &lt;q&gt; pois ela esta ligada ao sentido e não ao formato apenas. 
-            </p>
-
+    <h3>&lt;sup&gt;</h3>
+        <p>
+            Esta tag deixa um trexo do texto sobrescrito conforme exemplo: x<sup>20</sup>+3
+        </p>
     
+    <h3>&lt;sub&gt;</h3>
+        <p>
+            Esta tag deixa um trexo do texto subscrito conforme exemplo: H<sub>2</sub>O
+        </p>
+
+    <h3>&lt;pre&gt;</h3>
+        <p>
+            Esta tag é utilizada para representar texto pré-formatado. Um texto dentro desse elemento é tipicamente exibido em uma fonte não proporcional da mesma maneira em que o texto original foi disposto no arquivo. Espaços em branco são mantidos no texto da mesma forma em que este foi digitado. 
+        </p>
+    
+    <h3>&lt;code&gt;</h3>
+        <p>
+            Esta tag é utilizada para mostrar códigos scrippet dentro de um parágrafo conforme exemplo abaixo. Destaco que o código se encontra dentro de uma tag &lt;pre&gt; assim mantendo a formatação digitada e orientada conforme os espaçamentos.
+        </p>
+        <pre>
+            <code>
+                num = int(input('Digite um número'))
+                if num % 2 == 0:
+                    print(f'0 número {num} é PAR')
+                else:
+                    print(f'0 número {num} é ÍMPAR')
+                print('Fim do programa')
+            </code>
+        </pre>
+
+    <h3>&lt;q&gt;</h3>
+        <p>
+            Esta tag adiciona aspas &#34 &quot; diferente do código isolado, recomenda-se a utilização da tag &lt;q&gt; pois ela esta ligada ao sentido e não ao formato apenas. 
+        </p>
+
+    <h3>&lt;blockquote&gt;</h3>
+        <p>
+            Esta tag e utilizada para realizar citações, sendo utilizada em conjunto com o tag <q>cite</q>, nesta tag será inserida a referência ou link onde não será apresentado na execução do código, somente internamente. 
+        </p>
+        <p>Segue exemplo abaixo:</p>
+        <pre>
+        <blockquote cite="https://www.pensador.com/ayrton_senna_frases_inspiradoras/">
+            Quando penso que cheguei ao meu limite descubro que tenho forças para ir além.
+            Ayrton Senna da Silva
+        </blockquote>
+        </pre>
+    
+    <h3>&lt;abbr&gt;</h3>
+        <p>
+            Esta tag é utilizada em cima de abreviações onde ao passar o mouse será apresentada uma janela com o texto completo. Segue exemplo:
+        </p>
+        <p>
+            Estou estudando <abbr title="Hiper Text Markup Language">HTML</abbr> e <abbr title="Cascading Style Sheets">CSS</abbr>.
+        </p>
+    
+    <h3>&lt;ol&gt;</h3>
+        <p>
+            Esta tag é utilizada para fazer listas ordenadas (1,2,3...), para ajustar a formatação da ordenação utilize o parametro type="" dentro da tag inserindo uma das opções: 1 A a I i.
+        </p>
+    
+    <h3>&lt;ul&gt;</h3>
+        <p>
+            Esta tag é utilizada para fazer listas não ordenadas, elas são sinalizadas com simbolos, para ajustar a formatação da lista utilize o parametro type="" dentro da tag inserindo uma das opções: disc, circle, square.
+        </p>
+        
+    <h3>&lt;li&gt;</h3>
+        <p>
+            Esta tag é utilizada dentro das tags de listas criando partes de uma lista (linhas).
+        </p>
+
+    <h3>&lt;dl&gt; &lt;dt&gt; &lt;dd&gt;</h3>
+        <ul>
+            <li>A tag &lt;dl&gt; é utilizada para listas de ítens com definições.</li>
+            <li>A tag &lt;dt&gt; é utilizada para definição de um único termo em linha com conteúdo</li>
+            <li>A tag &lt;dd&gt; é utilizada para aplicara a descrição do termo definido</li>
+        </ul>
+        <p>
+            Estas tags estão sendo apresntadas conforme exemplo abaixo: 
+        </p>
+        <dl>
+            <dt>HTML</dt>
+            <dd>Linguagem de marcação para a criação de conteúdo de um site</dd>
+            <dt>CSS</dt>
+            <dd>Liguagem de marcação para a criação de design de um site</dd>
+            <dt>JavaScript</dt>
+            <dd>Liguagem de programação para a criação de interatividade de um site</dd>
+        </dl>
+
+    <h3>&lt;a href="">&lt;/a&gt;</h3>
+        <p>
+            Esta é uma tag utilizada em links externos, internos e para downloads. <br>
+            Dentro das as pas de href="" será inserido o link ou arquivo para download. <br> 
+            Insira dentro da tak o texto que será o acesso ao link. <br>
+            Ao utilizar os parametros target="_blank" e rel="external" dentro da tag você estara direcinando a abertura do link para outra aba do navegador.  
+        </p>
+        <p>
+            Segue exemplos abaixo onde podemos utilizar a tag de links de outra forma:
+        </p>
+        <p>
+            <a href="mailto:meuemail@email.com">meuemail@email.com</a>
+        </p>
+        <p>
+            <a href="tel:3197547-1566">3197547-1566</a>
+        </p>
+        
 </body>
 </html>
