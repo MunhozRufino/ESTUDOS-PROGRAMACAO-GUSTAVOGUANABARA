@@ -6,11 +6,11 @@ body{
     font-size: 20px;
 }
 h1{
-    color: mediumblue;
+    color: rgba(0, 0, 205, 0.651);
     background-color: lightblue;
 }
 h2{
-    color: darkred;
+    color: rgb(224, 19, 180);
 }
 p{
     text-align: justify;
