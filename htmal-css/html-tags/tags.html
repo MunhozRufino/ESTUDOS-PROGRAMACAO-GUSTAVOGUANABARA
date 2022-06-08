@@ -9,7 +9,6 @@
 </head>
 <body>
     <h1>O que são tags HTML</h1>
-    
     <p>
         O HTML baseia-se em marcações específicas chamdas tags. Uma tag é um conjunto de palavras entre sinais de cochetes angular "&lt;&gt;"
     </p>
@@ -249,10 +248,105 @@
             Segue exemplos abaixo onde podemos utilizar a tag de links de outra forma:
         </p>
         <p>
-            <a href="mailto:meuemail@email.com">meuemail@email.com</a>
+            <a href="mailto:meuemail@email.com" rel="external">meuemail@email.com</a>
         </p>
         <p>
-            <a href="tel:3197547-1566">3197547-1566</a>
+            <a href="tel:3197547-1566" rel="external">3197547-1566</a>
         </p>
+        <p>
+            Outro atributo bem útil da tag de âncora é o hreflang, que permite indicar qual é o idioma principal do site par onde o link está desviando o fluxo de navegação. Isso vai permitir avisar ao navegador e a softwares de tradução como lidar caso o visitante opte por traduzir automaticamento os conteúdos. 
+        </p>
+        <a href="https://www.youtube.com" hreflang="en" target="_blank" rel="external">Acesse o youtube aqui</a>
+        <p>
+            Outra forma de trabalhar os link e tranforma-los em links para downloads, segue abaixo exemplos de links com essa função: 
+        </p>
+        <ul>
+            <li><a href="../exercícios/ex010/livro/meulivro.pdf" target="_blank" download="meulivro.pdf" type="application/pdf">Baixar o livro em PDF</a></li>
+            <li><a href="../exercícios/ex010/livro/meulivro.zip">Livro compactado em ZIP</a></li>
+        </ul>
+
+        <h3>&lt;picture&gt;</h3>
+        <p>
+            O elemento HTML <picture>permite exibir imagens diferentes para diferentes dispositivos ou tamanhos de tela.
+        </p>
+        <p>
+            Existem dois propósitos principais para o <picture>elemento:
+        </p> 
+        <ol>
+            <li>
+                <strong>Largura de banda:</strong> <br>
+                Se você tiver uma tela ou dispositivo pequeno, não é necessário carregar um arquivo de imagem grande. O navegador usará o primeiro <source> elemento com valores de atributo correspondentes e ignorará qualquer um dos elementos a seguir.
+            </li>
+            <li>    
+                <strong>Suporte ao formato:</strong> <br> 
+                Alguns navegadores ou dispositivos podem não suportar todos os formatos de imagem. Ao usar o <picture>elemento, você pode adicionar imagens de todos os formatos, e o navegador usará o primeiro formato que reconhecer e ignorará qualquer um dos seguintes elementos.
+            </li>
+        </ol>
+        <p>
+            Segue exemplo de aplicação com &lt;picture&gt; e &lt;source&gt;:
+        </p>
+        <picture>
+            <source media="(max-width: 750px)" srcset="../exercícios/ex011/imagens/foto-p.png" type="image/png">
+            <source media="(max-width: 1050px)" srcset="../exercícios/ex011/imagens/foto-m.png" type="image/png">
+            <img src="../exercícios/ex011/imagens/foto-g.png" alt="imagem flexível">
+        </picture>
+        <!--A ordem de tamanho tem que ser em sequência da maior para menor com referência a tag img-->
+
+        <h3>&lt;audio&gt;</h3>
+        <p>
+            A tag &lt;audio&gt; é usada para incorporar conteúdo de som em um documento, como música ou outros fluxos de áudio.
+        </p>
+        <ul>
+            <li>A tag &lt;audio&gt; contém uma ou mais &lt;source&gt; tags com diferentes fontes de áudio. O navegador escolherá a primeira fonte que ele suporta.</li>
+            <li>O texto entre as tags &lt;audio&gt; e &lt;/audio&gt; só será exibido em navegadores que não suportam o &lt;audio&gt; elemento.</li>
+            <li>Existem três formatos de áudio suportados em HTML: MP3, WAV e OGG.</li>
+        </ul>
+        <p>
+            Segue exemplo de aplicação com &lt;audio&gt; e &lt;source&gt;:
+        </p> 
+        <audio preload="metadata" controls loop> <!--usar autoplay se necessário-->
+            <source src="../exercícios/ex011/midia/casa-vega-yeti-music-main-version-01-49-3026.mp3" type="audio/mpeg">
+            <source src="../exercícios/ex011/midia/casa-vega-yeti-music-main-version-01-49-3026.ogg" type="audio/ogg">
+            <source src="../exercícios/ex011/midia/casa-vega-yeti-music-main-version-01-49-3026.wav" type="audio/wav">
+            <p>Infelizmente seu navegador não consegue reproduzir áudio.</p>
+            <p><a href="../exercícios/ex011/midia/casa-vega-yeti-music-main-version-01-49-3026.mp3" download="audio/mpeg">Clique aqui para baixar o áudio.</a></p> 
+        </audio>
+
+        <h3>&lt;video&gt;</h3>
+        <p>
+            A tag &lt;video&gt; é usada para incorporar conteúdo de vídeo em um documento, como um clipe de filme ou outros fluxos de vídeo.
+        </p>
+        <ul style="list-style-type:square ;">
+            <li>A tag &lt;video&gt; contém uma ou mais &lt;source&gt; tags com diferentes origens de vídeo. O navegador escolherá a primeira fonte que ele suporta.</li>
+            <li>O texto entre as tags &lt;video&gt; e &lt;/video&gt; só será exibido em navegadores que não suportam o elemento &lt;video&gt;.</li>
+            <li>Existem três formatos de vídeo suportados em HTML: MP4, WebM e OGG.</li>
+        </ul>
+        <p>
+            Antes de mais nada, vamos criar a tag &lt;video&gt; e configurar alguns atributos importantes: 
+        </p>
+        <ul>
+            <li><em>width</em> vai indicar a largura que o vídeo vai ter na tela. Nesse exemplo, 600px.</li>
+            <li><em>poster</em> configura uma imagem que vai aparecer como uma capa, enquanto o visitante não aperta o play para reproduzir o video.</li>
+            <li><em>controls</em> vai configurar se os controles não aparecerão, mas basta colocar a palabra controls na tag &lt;video&gt;.</li>
+            <li><em>autoplay</em> diz para o navegador se o vídeo vai começar a tocar automaticamente, assimq ue a página for carregada.</li>
+        </ul>
+        <p>
+            Segue imagem abaixo destacando os navegadores e seus formatos de compatibilidade: 
+        </p>
+        <img src="Imagens/compatibilidade-video.PNG" alt="navegadore-compatibilidade" width="350px">
+        <p>
+            Dica: Youtube e Vimeo são serviços para hospedagem de vídeos que vai evitar consumir nossos próprios recursos de host contratado. Cada um tem suas vantagens e desvantagens:
+        </p>
+        <ul>
+            <li>Youtube é o serviço de hospedagem de vídeos mais popular do mundo e é gerenciado pelo Google. Sua principal vantagem é que seus servidores são ultra rápidos. Por outro lado a ideia do Google é deixar todos os vídeos públicos e disponíveis, podendo ser uma dor de cabeça caso queira limitar o acesso.</li>
+            <li>Vimeo resolve o problema que apontamos anteriormente, permitindo limitar quem vai poder ver o vídeo, o que e especialmente vantajoso para quem quer cirar produtos em forma de vídeo. Como desvantagem deve ser paga uma taxa anual e seus algoritimos não sao tão eficientes quanto os do Youtube.</li>
+        </ul>
+        <p>
+            Outra técnica de inserir vídeos e copiando o &lt;iframe&gt; que será disponivel em alguma opção de compartilhar em sites como Youtube e Vimeo, veja o exemplo abaixo: 
+        </p>
+        <p>
+            &lt;iframe width="560" height="315" src="https://www.youtube.com/embed/FdE5G95B7Mg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+        </p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/FdE5G95B7Mg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </body>
 </html>
