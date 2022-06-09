@@ -7,13 +7,34 @@
     <link rel="shortcut icon" href="../Iconleak-Cerulean-Compass.ico" type="image/x-icon">
     <title>Fontes CSS</title>
     <style>
-        body{
-            font-family: Arial, Helvetica, sans-serif;
-        }
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        /* 
+        Medidas Absolutas: cm, mm, in, px, pt, pc
+        Medidas Relativas: em, ex, rem, vw, vh, % 
+        Obs: geralmente 1em é equivalente a 16px 
+        Recomenda-se a utilização de px e em de acordo com a w3schools 
 
-        h1, h2{
-            font-family: 'Times New Roman', Times, serif;
-        }
+        font-size: 1em;
+        font-weight: bolder;
+        OBS: tipos de font-weight: lighter, normal, bold, bolder
+        font-style: italic;
+        text-decoration: underline; */
+    }
+
+    h1{
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bolder;
+        font-size: 3em;
+        font-style: italic;
+        /* shorthand font:
+        Ordem para execução: font-style-> font-weight-> font-family */
+        font: italic bolder 3em arial, Helvetica, sans-serif;        
+    }
+
+    h2{
+        font: italic bold 2em arial;   
+    }
     </style>
 </head>
 <body>
@@ -22,6 +43,5 @@
     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis architecto rem, facilis esse tempora eaque quas blanditiis mollitia sit totam sed sequi, laudantium similique impedit ipsum fugit vero nostrum? Sint?</p>
     <h2>Subtítulo do exercício</h2>
     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam totam laboriosam sunt expedita in illo eaque voluptatum ab, quisquam deserunt sapiente voluptas molestias quas reprehenderit. Doloremque incidunt eaque ducimus optio.</p>
-    
 </body>
 </html>
