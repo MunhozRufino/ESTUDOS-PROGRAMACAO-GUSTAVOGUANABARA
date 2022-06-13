@@ -1,0 +1,24 @@
+@charset "UTF-8";
+/*Regra @charset caso haja problemas com acentuação*/
+
+body{
+    background-color: rgb(70, 48, 0);
+    color: rgb(209, 162, 128);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h2{
+    color: goldenrod;
+    text-align: center;
+    font-size: 32px;
+}
+
+a{
+    color: brown;
+    text-decoration: none;
+    text-align: center;
+}
+
+id p{
+    text-align: center;
+}

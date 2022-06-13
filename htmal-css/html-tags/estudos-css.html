@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../exercícios/Iconleak-Cerulean-Compass.ico" type="image/x-icon">
+    <title>Estilos CSS</title>
+    <link rel="stylesheet" href="estudos-css.css">
+    <style>
+        bod{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgba(255, 209, 249, 0.274);
+            color: rgb(255, 209, 243);
+        }
+        h{
+            color: rgb(185, 245, 188);
+        }
+    </style>
+    <!--Este é um exemplo de CSS internal onde podemos definir estilos de forma conjunto na mesma página. Retirei a ultima letra dos parametro para não ficarem ativados-->
+</head>
+<body styl="font-famil: Arial, Helvetica, sans-serif; colo:blue"> 
+<!--Este é um exemplo de CSS inline, utilizamos para definir estilos diretamente na tag. Retirei a ultima letra dos parametro para não ficarem ativados--> 
+    <h2><abbr title="Cascading Style Sheets">CSS</abbr> inline style</h2>
+    <p>Vamos começar pela técnica mais básica para aplicar estilos em áreas pontuais em nosso site, que é usando as CSS dentro de parâmetros de HTML5.</p>
+    <p>OBSERVAÇÃO: As configurações pontuais (HTML style dentro da tag) vão prevalecer sobre as configurações gerais (CSS style).</p>
+
+    <h2><abbr title="Cascading Style Sheets">CSS</abbr> internal style</h2>
+    <p>Para aplicar estilos de forma mais dinâmica e prática, podemos adicionar uma tag &lt;style&gt; dentro da área &lt;head&gt; do nosso documento HTML local.</p>
+    <p>OBSERVAÇÃO: As configurações pontuais (HTML style dentro da tag) vão prevalecer sobre as configurações gerais (CSS style).</p>
+
+    <h2><abbr title="Cascading Style Sheets">CSS</abbr> external style</h2>
+    <p>Manter as folhas de estilo fora do código HTML, além de uma maior organização faz com que tudo seja reaproveitado de maneira mais eficiente nas outras páginas  do nosso site. Para isso, utilizamos a tag &lt;link&gt; especialmente configurada para trabalhar com arquivos externos de estilo. Essa tag deve ser colocada dentro da área &lt;head&gt; do seu documento HTML.</p>
+
+    <h2>Qual técnica eu escolho para usar?</h2>
+    <p>Nesse cápitulo, aprendemos as três técnicas de uso de folhas de estilo em cascata: inline, interna e externa. Mas em que situações devemos escolher cada um dos formatos?</p>
+    <p>A técnica CSS inline style deve ser evitada ao máximo. Ela acaba deixando seu código meio confuso, misturando a parte HTML e CSS em uma mesma linha. Use apenas em configurações pontuais.</p>
+    <p>A técnica CSS internal style organiza melhor seu código, separando contúdo e estilo em duas áreas bem definidas do seu documento. Use essa técnica quando for criar páginas isoladas com estilos próprios, que não serão replicados em outras páginas. Opte també por essa técnica apenas se a quantidade de configurações de estilo for pequena/média.</p>
+    <p>Por fim, opte sempre pela técnica CSS external style sempre que seu estilo for usado em várias páginas dentro do seu site. Usando a tag &lt;link&gt; em várias páginas, você pode compartilhar o mesmo estilo entre elas e não vai precisar ficar alterando vários arquivos quando o seu cliente solicitar uma pequena mudança no tom de uma determinada cor.</p>
+    <p>De forma resumida, guarde isso na sua cabeça:</p>
+    <ul>
+        <li>CSS extern = use sempre que puder</li>
+        <li>CSS interno = use para pequenas configurações</li>
+        <li>CSS inline = procure evitar</li>
+    </ul>
+    <p>OBSERVAÇÃO: Ainda é possível utilizar as três técnicas em seu projeto.</p>
+
+    <id>
+        <p>Clique <a href="https://github.com/gustavoguanabara/html-css/blob/master/aulas-pdf/12%20-%20Trabalhando%20com%20estilos.pdf">aqui</a> para ter acesso ao matérial em pdf contendo as informações das CSS Inline, internal, external.</p>
+    </id>
+</body>
+</html>
