@@ -28,11 +28,11 @@
     <main>
         <h2>CSS inline style</h2>
         <p>Vamos começar pela técnica mais básica para aplicar estilos em áreas pontuais em nosso site, que é usando as CSS dentro de parâmetros de HTML5.</p>
-        <p><strong>OBSERVAÇÃO:</strong> As configurações pontuais (HTML style dentro da tag) vão prevalecer sobre as configurações gerais (CSS style).</p>
+        <p class="observação"><strong>OBSERVAÇÃO:</strong> As configurações pontuais (HTML style dentro da tag) vão prevalecer sobre as configurações gerais (CSS style).</p>
 
         <h2>CSS internal style</h2>
         <p>Para aplicar estilos de forma mais dinâmica e prática, podemos adicionar uma tag &lt;style&gt; dentro da área &lt;head&gt; do nosso documento HTML local.</p>
-        <p><strong>OBSERVAÇÃO:</strong> As configurações pontuais (HTML style dentro da tag) vão prevalecer sobre as configurações gerais (CSS style).</p>
+        <p class="observação"><strong>OBSERVAÇÃO:</strong> As configurações pontuais (HTML style dentro da tag) vão prevalecer sobre as configurações gerais (CSS style).</p>
 
         <h2>CSS external style</h2>
         <p>Manter as folhas de estilo fora do código HTML, além de uma maior organização faz com que tudo seja reaproveitado de maneira mais eficiente nas outras páginas  do nosso site. Para isso, utilizamos a tag &lt;link&gt; especialmente configurada para trabalhar com arquivos externos de estilo. Essa tag deve ser colocada dentro da área &lt;head&gt; do seu documento HTML.</p>
@@ -50,8 +50,8 @@
             <li>CSS inline = procure evitar</li>
         </ul>
 
-        <p><strong>OBSERVAÇÃO:</strong> Ainda é possível utilizar as três técnicas em seu projeto.</p>
-        <p class="topico">Clique <a href="https://github.com/gustavoguanabara/html-css/blob/master/aulas-pdf/12%20-%20Trabalhando%20com%20estilos.pdf">aqui</a> para ter acesso ao matérial em pdf contendo as informações das CSS Inline, internal, external.</p>
+        <p class="observação"><strong>OBSERVAÇÃO:</strong> Ainda é possível utilizar as três técnicas em seu projeto.</p>
+        <p class="topico">Clique <a href="https://github.com/gustavoguanabara/html-css/blob/master/aulas-pdf/12%20-%20Trabalhando%20com%20estilos.pdf" class="none-decoration">aqui</a> para ter acesso ao matérial em pdf contendo as informações das CSS Inline, internal, external.</p>
 
         <h2>Personalizando Seletores</h2>
         <p>Vamos aprender a usar seletores de &lt;id&gt;(#) e class (.) de maneira eficiente.</p>
@@ -60,9 +60,33 @@
         <p><strong>MAIS UMA REGRA:</strong> Todo id em HTML é identificado nas CSS por um símbolo #. Toda class em HTML é identificada nas CSS por um ponto.</p>
 
         <h2>Pseudo-classes e Pseudo-elementos</h2>
-    </main>
+        <p>Uma pseudo-classe CSS é uma palavra-chave adicionada às declarações de um seletor após um sinal de dois pontos e especificam um estado especial de um elemento.</p>
+        <p>Existem vários <strong>pseudo-classes</strong> para estilos, podemos citar: :hove, :visited, :active, :checked, :empty e :focus.</p>
+        <p>Já um pseudo-elemento CSS é uma palavra-chave adicionada às declarações de um seletor após dois sinais d edois pontos e permitem que você formate um pedaço específico do elemento referenciado.</p>
+        <p>Os principais <strong>pseudo-elementos</strong> usados nas CSS são: ::before, ::after, ::frist-latter, ::frist-line.</p>
+        <p>Vamos criar um exemplo bem simples e bastante usado para exemplificar o uso de pseudo-classes e pseudo-elementos:</p>
+        
+            <aside class="exercicio">
+                <h3>Personalizando um link com pseudo-classes</h3>
+                <h4>Passe o mause e veja a aplicação de uma pseudo-classe</h4>
+                <p>- Para aprender HTML5 e CSS3, acesse o <a href="#">GitHub do Guanabara</a>.</p>
+                <p>- Se quiser conhecer mais visite o site do <a href="#">Escritório do W3C no Brasil</a>.</p>
+                <p>- Para acompanhar os cursos, acesse o canal do <a href="#" class="especial">Curso em Video</a>.</p>
+            </aside>
+        
+        <h2>O que é uma Caixa?</h2>
+        <p>De forma simples e objetiva, badeado em um cnceito chamado "box model", a grande maioria dos elementos HTML que temos no nosso site são como caixas. Elas são containers que armazenam conteúdos ou até mesmo outras caixas.</p>
+        <p>Vamos analisar como uma caixa vai ser apresentada por todos os navegadores. Olhe atentamente o diagrama a seguir, que é extamente o já citado modelo de caixa:</p>
+        
+        <picture>
+            <img src="./Imagens/modelo-de-caixa.PNG" alt="modelo-de-caixa">
+        </picture>
 
-    
+        <p>Todo conteúdo possui uma largura (width) e uma altura (height) e a esse conjunto de propriedades, damos o nome de box-size (tamanho da caixa). O tamanho da caixa não inclui as medidas de padding, border, outline e margin.</p>
+
+        <p class="observação"><strong>OBSERVAÇÂO:</strong> Novidade das CSS3, exite a nova propriedade box-sizing onde podemos definir que as dimensões height e width não são medidas apenas a partir do conteúdo (content-box) e sim pela borda (border-box).</p>
+
+    </main>
     
 </body>
 </html>
