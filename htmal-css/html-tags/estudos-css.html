@@ -51,7 +51,7 @@
         </ul>
 
         <p class="observação"><strong>OBSERVAÇÃO:</strong> Ainda é possível utilizar as três técnicas em seu projeto.</p>
-        <p class="topico">Clique <a href="https://github.com/gustavoguanabara/html-css/blob/master/aulas-pdf/12%20-%20Trabalhando%20com%20estilos.pdf" class="none-decoration">aqui</a> para ter acesso ao matérial em pdf contendo as informações das CSS Inline, internal, external.</p>
+        <p class="topico">Clique <a href="https://github.com/gustavoguanabara/html-css/blob/master/aulas-pdf/12%20-%20Trabalhando%20com%20estilos.pdf" class="cor-link">aqui</a> para ter acesso ao matérial em pdf contendo as informações das CSS Inline, internal, external.</p>
 
         <h2>Personalizando Seletores</h2>
         <p>Vamos aprender a usar seletores de &lt;id&gt;(#) e class (.) de maneira eficiente.</p>
@@ -66,7 +66,7 @@
         <p>Os principais <strong>pseudo-elementos</strong> usados nas CSS são: ::before, ::after, ::frist-latter, ::frist-line.</p>
         <p>Vamos criar um exemplo bem simples e bastante usado para exemplificar o uso de pseudo-classes e pseudo-elementos:</p>
         
-            <aside class="exercicio">
+            <aside>
                 <h3>Personalizando um link com pseudo-classes</h3>
                 <h4>Passe o mause e veja a aplicação de uma pseudo-classe</h4>
                 <p>- Para aprender HTML5 e CSS3, acesse o <a href="#">GitHub do Guanabara</a>.</p>
@@ -79,6 +79,7 @@
         <p>Vamos analisar como uma caixa vai ser apresentada por todos os navegadores. Olhe atentamente o diagrama a seguir, que é extamente o já citado modelo de caixa:</p>
         
         <picture>
+            <source media="(max-width: 270px)" srcset="./Imagens/modelo-de-caixa-p.PNG">
             <img src="./Imagens/modelo-de-caixa.PNG" alt="modelo-de-caixa">
         </picture>
 
@@ -90,9 +91,75 @@
         <p>Para centralizar uma caixa, use a seguinte declaração no seu seletor: <mark>margin: auto;</mark></p>
 
         <h2>Tipos de Caixa</h2>
+        <p>Dependendo do comportamento da caixa, podemos classificar um elemento em uma de duas categorias:</p>
+
+        <h3>Caixa do tipo block-level:</h3>
+        <p>Um elemento dito <em>block-level</em> sempre vai se iniciar em uma nova linha e vai ocupar a largura total do elemento onde ele está contido. Se não estiver contido em nenhuma outra caixa, ele vai ocupar 100% da largura do &lt;body&gt;.</p>
+        <p>O elemento block-level mais conhecido é o &lt;div&gt; e suas variações semânticas modernas da HTML5, como &lt;main&gt;, &lt;section&gt;, &lt;aside&gt;, etc.</p>
+        <p>Veja asseguir alguns outros elementos HTML que são block-level:</p>
+
+        <picture>
+            <img src="./Imagens/block-level.PNG" alt="block-level" class="tipos-de-caixa">
+        </picture>
+
+        <h3>Caixa do tipo inline-level:</h3>
+        <p>Um elemento do tipo inline-level não vai começar em uma nova linha, e sim no ponto exato onde foram definidos. E a largura dele vai ocupar apenas o tamanho relativo ao seu conteúdo.</p>
+        <p>Abaixo, listei alguns elementos inline-level usados pela HTML5:</p>
+
+        <picture>
+            <img src="Imagens/inline-level.PNG" alt="inline-level" class="tipos-de-caixa">
+        </picture>
+
+        <h2>Grouping Tags e Semantic Tags</h2>
+        <p>A linguagem HTML padrão tinha apenas duas tags de agrupamento genérico: a &lt;div&gt; e a &lt;span&gt;. A diferença básica entre elas é que a primeira é um elemeno agrupador do tipo block-level e o segndo é inline-level. No mais, eles agem exatamente da mesma maneira, servindo para juntar vários outros elementos HTML.</p>
+        <p>Com o surgimento da HTML5, surgiram as tags semânticas de agrupamento. Isso não significa que as &lt;div&gt; e &lt;span&gt; (agora chamadas de não semânticas) deixaram de existir ou ficaram obsoletas em breve, mas seu uso agora faz menos sentido, pois temos tags para dividir as partes do nosso documento HTML.</p>
         
+            <article>
+            <h1>Vamos aprender a partir de agora os principais agregadores semânticos da HTML5:</h1>
+            <ul>
+                <li>Header:</li>
+                <p>Cria áreas relativas a cabeçalhos. Pode ser o cabeçalho principal de um site ou até mesmo o cabeçalho de uma seção ou artigo. Normalmente inclui títulos &lt;h1&gt; - &lt;h6&gt;e subtítulos. Podem também conter menus de navegação.</p>
+                <li>Nav:</li>
+                <p>Define uma área que possui os links de navegação pela estrutura de páginas que vão compor o website. Um &lt;nav&gt;pode estar dentro de um &lt;header&gt;.</p>
+                <li>Main:</li>
+                <p>É um agrupador usado para delimitar o conteúdo principal do nosso site. Normalmente concentra as seções, artigo e conteúdos periféricos.</p>
+                <li>Section:</li>
+                <p>Cria seções para sua página. Ela pode conter o contúdo diretamente no seu corpo ou dividir os conteúdos em artigos com conteúdos específicos. Segundo a documentação oficial da W3C "uma seção é um agrupamento temático de conteúdos, tipicamente com um cabeçalho".</p>
+                <li>Article:</li>
+                <p>Um artigo é um elemento que vai conter um conteúdo que pode ser lido de forma independente e dizemm respeito a um mesmo assunto. Podemos usar um &lt;articel&gt; para delimitar um post de blog ou fórum, uma notícia, etc.</p>
+                <li>Aside:</li>
+                <p>Delimita um conteúdo periférico e complementar aoconteúdo principal de um artigo ou seção. Normalmente um conteúdo &lt;aside&gt; está posicionado ao lado de um determinado texto ou até mesmo no meio dele.</p>
+                <li>Footer:</li>
+                <p>Cria um rodapé para o site inteiro, seção ou artigo. É um conteúdo que não faz parte diretamente do conteúdo nem é um conteúdo periférico ( o que caracterizaria um &lt;aside&gt;, mas possui informações sobre autoria do conteúdo, links adicionais, mapa do site, documentos relacionados.</p>
+            </ul>
+            </article>
+        <p>A seguir, vou criar uma proposta d eestrutura para um projeto de site. Não tome ela como a única possibilidade de criar o posicionamento d eelementos de agrupamento semântico.</p>
+        <p>Analise o diagrama do lado esquerdo e o código do lado direito da imagem acima. Veja a hierarquia entre os elementos e quais deles estão dentro um do outro.</p>
+
+        <picture>
+            <img src="Imagens/estrutura.PNG" alt="estrutura-projeto" class="estrutura-projeto">
+        </picture>
+
+        <h2>IMPORTANTE - Variáveis em CSS</h2>
+        <p>Vamos aprender a utilizar variáveis personalizadas com CSS para cadastrar os equemas de cores e fontes do nosso site e isso vai facilitar muit ona hora de efetura eventuais mudanças futuras.</p>
+        <p>Para criarmos variáveis para nossas configurações, devemos definir uma área de definições dentro do seu estilo para uma pseudo-classe chamada <strong>:root</strong>, que definem as configurações para a raiz de uma árvore, que vai servir para o documento interio. </p>
+        <p>Note que, pelas declarações criadas a baixo, definimos nove variáveis com as configurações de cores e fontes que definímos no início desse capítulo.</p>
+        
+        <picture>
+            <img src="Imagens/pseudo-classe-root.PNG" alt="pseudo-classe-root">
+            <img src="Imagens/root-body.PNG" alt="root-body">
+        </picture>
+
+        <p>A partir de agora, definir cores e fontes em nossos elementos HTML ficará extremamente mais fácil e personalizável utilizando a função var( ).</p>
+
+        <h2>Uso do seletor * em CSS</h2>
+        <p>Existe também um seletor especial das CSS que é o asterisco (*), ele tem uma função muito especial, pois basicamente ele aplica uma configuração padrão para TODOS os elementos do código HTML ao qual o estilo está sendo aplicado.</p>
 
     </main>
+
+    <footer>
+        <p>Entre no meu <a href="https://github.com/MunhozRufino">Github</a> e veja outros projetos legais.</p>
+    </footer>
     
 </body>
 </html>
