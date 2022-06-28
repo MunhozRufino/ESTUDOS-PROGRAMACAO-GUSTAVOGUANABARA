@@ -155,6 +155,126 @@
         <h2>Uso do seletor * em CSS</h2>
         <p>Existe também um seletor especial das CSS que é o asterisco (*), ele tem uma função muito especial, pois basicamente ele aplica uma configuração padrão para TODOS os elementos do código HTML ao qual o estilo está sendo aplicado.</p>
 
+        <h2>Vídeos do YouTube mais flexíveis</h2>
+        <p>Aprendemos como deixar as imagens mais "flexíveis" usando a tag &lt;picture&gt;. Também aprendemos a adicionar vídeos usando várias técnicas, inclusive aquelas que estão hospedados em serviços especializados como Vimeo e YouTube.</p>
+        <p>O problema é que, quando incorporamos um vídeo do YouTube ou Vimeo, isso é feito através de uma tag &lt;iframe&gt; que já vem com as configurações d eum tamanho fixo e precisamos alterar isso para que nossa interface possa se tornar mais responsiva e adaptar o tamanho do vídeo dinamicamente, principalmente para telas pequenas.</p>
+        <p>Para isso, vamos colocar o &lt;iframe&gt;de incorporação dentro de uma &lt;div&gt; para que o vídeo esteja limitado dentro de um contêiner.</p>
+
+        <picture>
+            <img src="Imagens/div-video.PNG" alt="div-video">
+        </picture>
+
+        <p>A partir daí, vamos fazer configurações de estilo para os dois elementos:</p>
+
+        <picture>
+            <img src="Imagens/div-video-style.PNG" alt="div-video-style">
+        </picture>
+
+        <p>O que nos importa mais aqui é entender o funcionamento da propriedade <em>position</em>, que é a única que não vimos até aqui. O valor padrão para essa propriedade de posicionamento é <em>static</em>, que mantém a hierarquia conforme estabelecido no documento HTML. </p>
+        <p>Na &lt;div&gt;, nós colocamos o valor como <em>relative</em> para que seja considerado o posicionamento atual do elemento de divisão e que ele se mantenha adaptável para o caso de alteração no tamanho do navegador.</p>
+        <p>Já dentro do <em>iframe</em>, nós usamos o posicionamento <em>absolute</em> para que a &lt;div&gt; - que é o seu contêiner - torne-se o ponto de partida para o posicionamento do frame. A partir daí, podemos utilizar propriedades para configurar o deslocamento à esquerda (left) e ao topo (top) e seu tamanho em largura (width) e altura (height), todos em porcentagem de tela.</p>
+
+        <h2>O fundo não precisa ter só cor</h2>
+        <p>Em capitulos anteriores, aprendemos a aplicar cores sólidas ou degradê em qualquer elemento de caixa, Mas você não precisa se limitar a essa possibilidade e pode aplicara imagens ao fundo de qualquer elemento exibido visualmente em HTML. Vamos a um exemplo simples com três &lt;div&gt; no corpo de um documento:</p>
+
+        <picture>
+            <img src="Imagens/div-imagem-fundo.PNG" alt="div-imagem-fundo">
+        </picture>
+
+        <p>Agora vamos criar a configuração de estilo base para toda &lt;div&gt; que possui a classe <em>quadrado</em>:</p>
+
+        <picture>
+            <img src="Imagens/div-imagem-fundo-style.PNG" alt="div-imagem-fundo-style">
+        </picture>
+
+        <p>Com esse código aplicado, temos o seguinte resultado na tela:</p>
+
+        <picture>
+            <img src="Imagens/div-resultado.PNG" alt="div-resultado">
+        </picture>
+
+        <p>Agora vamos adicionar algumas configurações individualmente a cada quadrado, usando os identificadores diferentes entre eles:</p>
+
+        <picture>
+            <img src="Imagens/div-inline-block-style.PNG" alt="div-inline-block-style">
+        </picture>
+
+        <p>Note que na definição da &lt;div&gt; que tem o <em>id</em> com o valor <em>q1</em>, usamos uma cor sólida, já para <em>q2</em>, usamos um preenchimento linear. Já na caixa <em>q3</em>, vamos aplicar uma imagem de fundo através de um endereço informado pela função <em>url()</em>.</p>
+        <p>Ao adicionar as linhas acima ao código, o resultado já muda consideravelmente:</p>
+
+        <picture>
+            <img src="Imagens/div-style-resultado.PNG" alt="div-style-resultado">
+        </picture>
+
+        <p>De forma geral, essas são as três maneiras mais simples de preencher uma caixa em HTML: cor sólida, degradê ou imagem de fundo.</p>
+
+        <h2>E não se esqueça: o body é uma grande caixa</h2>
+        <p>Esse recurso também pode ser usado ao &lt;body&gt; do seu site e o papel de parede será aplicado. Vamos considerar um exemplo bem simples que usa uma imagem disponível no nosso repositório.</p>
+
+        <picture>
+            <img src="Imagens/body-papel-de-parede.PNG" alt="body-papel-de-parede" style="max-width: 670px">
+        </picture> 
+
+        <p>Analisando o código acima, estamos usando uma <em>url()</em>, já que a imagem estará em outro servidor (no caso, no servidor do GitHub). A imagem em questão é razoavelmente pequena, então não vai ser suficiente para cobrir toda a tela. Sendo assim, o resultado será o seguinte:</p>
+
+        <picture>
+            <img src="Imagens/body-papel-aplicado.PNG" alt="body-papel-aplicado">
+        </picture>
+
+        <h3>Personalizando a aplicação do bacground</h3>
+        <p>Quando o tamanho da caixa é maior que o tamanho da imagem, por padrão, a imagem será <strong>repetida</strong> nos dois eixos (eixo x e eixo y) quantas vezes for necessário para cobrir a extensão da caixa contêiner.</p>
+        <p>É possível alterar esse comportamento usando a propriedade <em>bacground-repeat</em>, que aceita os seguintes valores:</p>
+
+        <picture>
+            <img src="Imagens/body-papel-personalizacao.PNG" alt="body-papel-personalizacao">
+        </picture>
+
+        <p>Note que ao usar o <em>no-repeat</em>, isso <strong>não obriga</strong> o navegador a aumentar ou diminuir o tamanho da imagem para caber no tamanho da caixa. Para realizar essa adaptação, devemos usar outra propriedade, que veremos mais adiante.</p>
+        <p>Além de escolher o nível de repetição do background, também podemos mudar a <strong>posicção de referência</strong> de início das repetições. Por padrão, é considerado o canto esquerdo superior (left top), mas podemos ter várias opções. Use a imagem abaixo como referência sempre que precisar definir a posição do fundo com a propriedade bacground- position no seu código.</p>
+
+        <picture>
+            <img src="Imagens/body-background-referencia.PNG" alt="body-background-referencia">
+        </picture>
+
+        <p>Outra coisa que podemos fazer é <strong>redimensionar</strong> a imagem para forçá-la a caber na caixa. Por padrão, nenhum redimensionamento será aplicado, e a imagem será exibida do seu tamanho natural. Porém, podemos usar a propriedade background-size para laterar esse comportamento.</p>
+        <p>Os valores aceitos por essa propriedade são:</p>
+
+        <picture>
+            <img src="Imagens/body-papel-redimensionar.PNG" alt="body-papel-redimensionar" style="max-width: 570px">
+        </picture>
+
+        <p>A última propriedade que podemos configurar é o <strong>vínculo</strong> (<em>attachment</em>) da imagem de fundo com o resto do documento, principalmente se o conteúdo for maior do que a altura da página e seja necessário vazer uma rolagem vertical.</p>
+        <p>Propriedade <em>background-attachment</em> aceita os valores:</p>
+
+        <picture>
+            <img src="Imagens/body-propriedade-attachment.PNG" alt="body-propriedade-attachment" style="max-width: 570px">
+        </picture>
+
+        <h2>Simplificando as coisas</h2>
+        <p>Assim como já vimos várias vezes em nosso materia, existe também a possibilidadede de usar uma <em>shorthand</em> para simplificar o uso de propriedades que se apliquem ao fundo de uma caixa. A propriedade abreviada <em>background</em> pode ser declarada agrupando as seguintes configurações:</p>
+
+        <ul>
+            <li>background-color</li>
+            <li>background-image</li>
+            <li>background-position</li>
+            <li>background-repeat</li>
+            <li>background-attachment</li>
+        </ul>
+
+        <p>Sendo assim, no lugar de usar:</p>
+
+        <picture>
+            <img src="Imagens/simplificando-style.PNG" alt="simplificando-style" style="max-width: 370px">
+        </picture>        
+
+        <p>Podemos reunir tudo em uma única declaração:</p>
+
+        <picture>
+            <img src="Imagens/simplificando-style2.PNG" alt="simplificando-style" style="max-width: 470px">
+        </picture>
+
+
+
     </main>
 
     <footer>

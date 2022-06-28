@@ -132,7 +132,11 @@ main p.observação > strong {
 }
 
 main strong {
-    color: #7b417c;
+    color: var(--cor-main-strong);
+}
+
+main em {
+    color: var(--cor-main-strong);
 }
 
 main > ul {
